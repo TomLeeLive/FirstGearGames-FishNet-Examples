@@ -48,7 +48,7 @@ public class PlayerNameTracker : NetworkBehaviour
     /// </summary>
     private void ServerManager_OnRemoteConnectionState(NetworkConnection arg1, FishNet.Transporting.RemoteConnectionStateArgs arg2)
     {
-        if (arg2.ConnectionState != RemoteConnectionStates.Started)
+        if (arg2.ConnectionState != RemoteConnectionState.Started)
             _playerNames.Remove(arg1);
     }
 

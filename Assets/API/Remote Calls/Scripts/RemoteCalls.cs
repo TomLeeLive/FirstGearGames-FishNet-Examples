@@ -37,7 +37,7 @@ namespace FishNet.Tutorial.RemoteCalling
                 //ObserversRpc.
                 else if (_remoteCallType == RemoteCallType.ObserversRpc && base.IsServer)
                     ObserversSetColor(RandomColor());
-                else if (_remoteCallType == RemoteCallType.TargetRpc && base.IsServer && base.OwnerIsActive)
+                else if (_remoteCallType == RemoteCallType.TargetRpc && base.IsServer && base.Owner.IsActive)
                     TargetSetColor(base.Owner, RandomColor());
 
                 //Wait a short duration.
